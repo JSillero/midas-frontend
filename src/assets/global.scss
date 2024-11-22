@@ -1,0 +1,36 @@
+@import "variables";
+
+body {
+    background-color: rgb(14, 14, 14);
+    color: rgb(212, 212, 212);
+}
+
+main {
+    padding-inline: 40px;
+}
+
+a {
+    color: rgb(212, 212, 212);
+    text-decoration: none;
+}
+
+h2,
+h3 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: $breakpoint-desktop) {
+    main {
+        max-width: $general-page-size-desktop;
+        margin: auto;
+        padding-inline: 0px;
+    }
+
+}
+
+@media (min-width: $breakpoint-tablet) {}

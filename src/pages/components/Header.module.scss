@@ -1,0 +1,142 @@
+@import "../../assets/variables";
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(52, 53, 43);
+    padding-bottom: 20px;
+    border-radius: 10px;
+
+    .titleElement {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-size: 1.6rem;
+            margin-block: 15px;
+        }
+
+        svg {
+            /* this is the fontawesome bar icon */
+            width: 1rem;
+        }
+
+        padding-inline: 40px;
+    }
+
+    .navMenu {
+        list-style-type: none;
+        width: 100%;
+        padding-inline: 40px;
+        margin-block: 0px;
+
+        display: none;
+
+        li {
+            margin-block: 12px;
+            font-size: 1.4rem;
+        }
+    }
+
+    .open {
+        display: block;
+    }
+
+    .searchBar {
+        background-color: black;
+        width: 80%;
+        margin: auto;
+        padding-block: 20px;
+        order: 1;
+        padding-inline: 20px;
+        border-radius: 10px;
+
+        form {
+
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        input[type=text] {
+            width: calc(100% - 150px);
+        }
+    }
+
+
+}
+
+/* Table styles */
+@media (min-width: $breakpoint-tablet) {
+    header {
+        padding-block: 0px;
+        padding-inline: 0px;
+        margin: 20px;
+        .titleElement {
+            justify-content: center;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            justify-content: left;
+        }
+
+        .navMenu {
+            display: flex;
+            width: calc(45% - 40px);
+            gap: 15px;
+            padding-right: 0px;
+
+            li {
+                font-size: 1.1rem;
+            }
+        }
+
+        .searchBar {
+            width: calc(55% - 40px);
+            padding-left: 20px;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+        }
+
+    }
+}
+
+/* Computers styles */
+@media (min-width: $breakpoint-desktop) {
+    header {
+        padding: 20px;
+        max-width: $general-page-size-desktop;
+        margin: auto auto;
+
+        .searchBar {
+            background-color: inherit;
+            width: 25%;
+            padding: 0;
+        }
+
+        .navMenu {
+            width: calc(42% - 20px);
+            justify-content: right;
+            gap: 20px;
+            padding: 0;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .titleElement {
+            width: 396px;
+            padding: 0;
+
+        }
+
+    }
+}
