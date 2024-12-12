@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 
 import { searchStory } from "../../services/storyService";
 import { useNavigate } from 'react-router-dom';
+
+import styles from "./AdvancedSearchPage.module.scss";
 export const AdvancedSearchPage = ({ storiesResultState, setStoriesResult }) => {
     const [searchBarState, setSearchBar] = useState({
         title: '',
@@ -34,7 +36,7 @@ export const AdvancedSearchPage = ({ storiesResultState, setStoriesResult }) => 
     return (
         <main>
             <h2>Advanced search</h2>
-            <form onSubmit={handleSubmitForm}>
+            <form onSubmit={handleSubmitForm} className={styles.searchForm}>
                 <label>
                     Title: <input type="text"
                         name="title"

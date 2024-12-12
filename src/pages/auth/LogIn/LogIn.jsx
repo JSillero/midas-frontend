@@ -69,10 +69,7 @@ export const LogIn = ({ userState, setUser }) => {
                 {error && <p className={styles.error}>{error}</p>} {/* Display error if exists */}
 
                 <button type="submit">Log In</button>
-                <p className={styles.text}>OR</p>
-                <button>
-                    <Link className={styles.link} to={"/user/singup"}>Sign Up</Link>
-                </button>
+                 
             </form>
         </main>
     )

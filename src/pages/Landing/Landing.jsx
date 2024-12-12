@@ -7,6 +7,8 @@ import { StoryList } from "../components/Story/StoryList/StoryList";
 import { StoryUpdateList } from '../components/Story/StoryUpdate/StoryUpdateList/StoryUpdateList';
 import { LandingReviewList } from '../components/Review/LandingReviewList/LandingReviewList';
 
+import styles from "./Landing.module.scss";
+ 
 export const Landing = () => {
     const [storiesState, setStories] = useState([]);
     const [chaptersState, setChapters] = useState([]);
@@ -36,12 +38,12 @@ export const Landing = () => {
         <main>
             <div>
                 <h3>Most Followed</h3>
-                <StoryList stories={storiesState} />
+                <StoryList stories={storiesState} className={styles.list} />
             </div>
 
             <div>
                 <h3>Latest Updates</h3>
-                <StoryUpdateList chapters={chaptersState} stories={storiesState} />
+                <StoryUpdateList chapters={chaptersState} stories={storiesState} className={styles.list}/>
             </div>
 
             {/* <div> TAGS TO BE IMPLEMENTED
@@ -51,7 +53,7 @@ export const Landing = () => {
 
             <div>
                 <h3>Latest Reviews</h3>
-                <LandingReviewList reviews={reviewsState} />
+                <LandingReviewList reviews={reviewsState} className={styles.list} />
 
             </div>
         </main>

@@ -1,0 +1,14 @@
+.searchForm {
+    label{
+        text-align: center;
+        margin-block: 15px  ;
+    }
+    input {
+        display: block;
+        margin: auto;
+    }
+
+    input[type=submit] {
+        width: 40%;
+    }
+}

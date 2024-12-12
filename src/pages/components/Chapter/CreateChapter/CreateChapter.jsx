@@ -95,7 +95,7 @@ export const CreateChapter = ({ userState, setUser }) => {
 
                 {error && <p >{error}</p>} {/* Display error if exists */}
 
-                <button type="submit">Add a chapter</button>
+                <button type="submit">Create</button>
 
             </form>
         </main>

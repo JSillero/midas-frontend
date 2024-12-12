@@ -5,11 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { getUser } from '../../../utils/auth';
 
 export const SignUp = ({ userState, setUser }) => {
+    const navigate = useNavigate();
 
-    if (userState.username != '') {
-        console.log("is logged")
-        navigate('/')
-    }
 
     const [signInData, setSignInData] = useState({
         username: '',
@@ -17,7 +14,7 @@ export const SignUp = ({ userState, setUser }) => {
         password_confirmation: '',
     });
     const [error, setError] = useState(''); // Add error state
-    const navigate = useNavigate();
+
 
     const handleSignUp = async () => {
         try {
@@ -52,7 +49,7 @@ export const SignUp = ({ userState, setUser }) => {
     return (
         <main >
             <form onSubmit={handleSubmitForm}>
-                <h1 className={styles.heading}>Sign Up</h1>
+                <h2 className={styles.heading}>Sign Up</h2>
                 <div className={styles.fields}>
                     <div>
                         <label htmlFor="username">Username</label>
@@ -92,10 +89,7 @@ export const SignUp = ({ userState, setUser }) => {
                 {error && <p className={styles.error}>{error}</p>} {/* Display error if exists */}
 
                 <button type="submit">Sign Up</button>
-                <p className={styles.text}>OR</p>
-                <button>
-                    <Link className={styles.link} to={"/user/login"}>Log in</Link>
-                </button>
+
             </form>
         </main>
     );

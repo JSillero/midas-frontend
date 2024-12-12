@@ -7,6 +7,37 @@ body {
 
 main {
     padding-inline: 40px;
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+
+        >* {
+            width: 100%;
+
+            >div,
+            label {
+                text-align: center;
+                margin-block: 15px;
+
+                input,
+                textarea {
+                    width: 80%;
+                    display: block;
+                    margin: auto;
+                }
+                textarea{
+                    height: 100px;
+                }
+            }
+
+        }
+
+        button[type=submit] {
+            width: 30%;
+            margin: auto;
+        }
+    }
 }
 
 a {
@@ -19,10 +50,11 @@ h3 {
     text-align: center;
 }
 
-form {
-    display: flex;
-    flex-wrap: wrap;
+ul{
+    text-align: center;
 }
+
+
 
 @media (min-width: $breakpoint-desktop) {
     main {
